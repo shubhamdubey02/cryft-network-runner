@@ -14,28 +14,28 @@ import (
 	"strings"
 	"time"
 
-	"github.com/MetalBlockchain/metalgo/vms/platformvm/reward"
+	"github.com/cryft-labs/cryftgo/vms/platformvm/reward"
 
-	"github.com/MetalBlockchain/metalgo/vms/avm"
-	"github.com/MetalBlockchain/metalgo/vms/components/avax"
-	"github.com/MetalBlockchain/metalgo/vms/components/verify"
-	"github.com/MetalBlockchain/metalgo/wallet/chain/x"
+	"github.com/cryft-labs/cryftgo/vms/avm"
+	"github.com/cryft-labs/cryftgo/vms/components/avax"
+	"github.com/cryft-labs/cryftgo/vms/components/verify"
+	"github.com/cryft-labs/cryftgo/wallet/chain/x"
 
-	"github.com/MetalBlockchain/metalgo/api/admin"
-	"github.com/MetalBlockchain/metalgo/config"
-	"github.com/MetalBlockchain/metalgo/genesis"
-	"github.com/MetalBlockchain/metalgo/ids"
-	"github.com/MetalBlockchain/metalgo/utils/constants"
-	"github.com/MetalBlockchain/metalgo/utils/crypto/bls"
-	"github.com/MetalBlockchain/metalgo/utils/logging"
-	"github.com/MetalBlockchain/metalgo/utils/set"
-	"github.com/MetalBlockchain/metalgo/vms/platformvm"
-	"github.com/MetalBlockchain/metalgo/vms/platformvm/signer"
-	"github.com/MetalBlockchain/metalgo/vms/platformvm/txs"
-	"github.com/MetalBlockchain/metalgo/vms/secp256k1fx"
-	"github.com/MetalBlockchain/metalgo/wallet/chain/p"
-	"github.com/MetalBlockchain/metalgo/wallet/subnet/primary"
-	"github.com/MetalBlockchain/metalgo/wallet/subnet/primary/common"
+	"github.com/cryft-labs/cryftgo/api/admin"
+	"github.com/cryft-labs/cryftgo/config"
+	"github.com/cryft-labs/cryftgo/genesis"
+	"github.com/cryft-labs/cryftgo/ids"
+	"github.com/cryft-labs/cryftgo/utils/constants"
+	"github.com/cryft-labs/cryftgo/utils/crypto/bls"
+	"github.com/cryft-labs/cryftgo/utils/logging"
+	"github.com/cryft-labs/cryftgo/utils/set"
+	"github.com/cryft-labs/cryftgo/vms/platformvm"
+	"github.com/cryft-labs/cryftgo/vms/platformvm/signer"
+	"github.com/cryft-labs/cryftgo/vms/platformvm/txs"
+	"github.com/cryft-labs/cryftgo/vms/secp256k1fx"
+	"github.com/cryft-labs/cryftgo/wallet/chain/p"
+	"github.com/cryft-labs/cryftgo/wallet/subnet/primary"
+	"github.com/cryft-labs/cryftgo/wallet/subnet/primary/common"
 	"github.com/shubhamdubey02/cryft-network-runner/network"
 	"github.com/shubhamdubey02/cryft-network-runner/network/node"
 	"github.com/shubhamdubey02/cryft-network-runner/utils"
@@ -698,7 +698,7 @@ func (ln *localNetwork) addPrimaryValidators(
 	w *wallet,
 ) error {
 	ln.log.Info(logging.Green.Wrap("adding the nodes as primary network validators"))
-	// ref. https://docs.metalblockchain.org/build/metalgo-apis/p-chain/#platformgetcurrentvalidators
+	// ref. https://docs.shubhamdubey02.org/build/metalgo-apis/p-chain/#platformgetcurrentvalidators
 	cctx, cancel := createDefaultCtx(ctx)
 	vdrs, err := platformCli.GetCurrentValidators(cctx, constants.PrimaryNetworkID, nil)
 	cancel()

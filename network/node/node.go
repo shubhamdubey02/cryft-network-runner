@@ -6,10 +6,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/MetalBlockchain/metalgo/config"
-	"github.com/MetalBlockchain/metalgo/ids"
-	"github.com/MetalBlockchain/metalgo/network/peer"
-	"github.com/MetalBlockchain/metalgo/snow/networking/router"
+	"github.com/cryft-labs/cryftgo/config"
+	"github.com/cryft-labs/cryftgo/ids"
+	"github.com/cryft-labs/cryftgo/network/peer"
+	"github.com/cryft-labs/cryftgo/snow/networking/router"
 	"github.com/shubhamdubey02/cryft-network-runner/api"
 	"github.com/shubhamdubey02/cryft-network-runner/network/node/status"
 )

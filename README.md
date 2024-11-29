@@ -14,13 +14,13 @@ This tool may be especially useful for development and testing.
 To download a binary for the latest release, run:
 
 ```sh
-curl -sSfL https://raw.githubusercontent.com/MetalBlockchain/metal-network-runner/main/scripts/install.sh | sh -s
+curl -sSfL https://raw.githubusercontent.com/shubhamdubey02/cryft-network-runner/main/scripts/install.sh | sh -s
 ```
 
 To install a specific version, just append the desired version to the command (must be an existing github tag like v1.3.1)
 
 ```sh
-curl -sSfL https://raw.githubusercontent.com/MetalBlockchain/metal-network-runner/main/scripts/install.sh | sh -s v1.3.1
+curl -sSfL https://raw.githubusercontent.com/shubhamdubey02/cryft-network-runner/main/scripts/install.sh | sh -s v1.3.1
 ```
 
 The binary will be installed inside the `~/bin` directory.
@@ -120,7 +120,7 @@ To start a new Metal network with five nodes (a cluster):
 
 ```bash
 # replace execPath with the path to metalgo on your machine
-# e.g., ${HOME}/go/src/github.com/MetalBlockchain/metalgo/build/metalgo
+# e.g., ${HOME}/go/src/github.com/cryft-labs/cryftgo/build/metalgo
 METALGO_EXEC_PATH="metalgo"
 
 curl -X POST -k http://localhost:8081/v1/control/start -d '{"execPath":"'${METALGO_EXEC_PATH}'","numNodes":5,"logLevel":"INFO"}'
@@ -428,7 +428,7 @@ node5
 To restart a node (in this case, the one named `node1`):
 
 ```bash
-# e.g., ${HOME}/go/src/github.com/MetalBlockchain/metalgo/build/metalgo
+# e.g., ${HOME}/go/src/github.com/cryft-labs/cryftgo/build/metalgo
 METALGO_EXEC_PATH="metalgo"
 
 # Note that you can restart the node with a different binary by providing
@@ -447,7 +447,7 @@ node1
 To add a node (in this case, a new node named `node99`):
 
 ```bash
-# e.g., ${HOME}/go/src/github.com/MetalBlockchain/metalgo/build/metalgo
+# e.g., ${HOME}/go/src/github.com/cryft-labs/cryftgo/build/metalgo
 METALGO_EXEC_PATH="metalgo"
 
 # Note that you can add the new node with a different binary by providing
@@ -501,14 +501,14 @@ You can also provide additional flags that specify the node's config:
   --node-config '{"index-enabled":false, "api-admin-enabled":true,"network-peer-list-gossip-frequency":"300ms"}'
 ```
 
-`--node-config` allows to specify specific metalgo config parameters to the new node. See [here](https://docs.metalblockchain.org/build/references/metalgo-config-flags) for the reference of supported flags.
+`--node-config` allows to specify specific metalgo config parameters to the new node. See [here](https://docs.shubhamdubey02.org/build/references/metalgo-config-flags) for the reference of supported flags.
 
 **Note**: The following parameters will be _ignored_ if set in `--node-config`, because the network runner needs to set its own in order to function properly:
 `--log-dir`
 `--db-dir`
 
 metalgo exposes a "test peer", which you can attach to a node.
-(See [here](https://github.com/MetalBlockchain/metalgo/blob/master/network/peer/test_peer.go) for more information.)
+(See [here](https://github.com/cryft-labs/cryftgo/blob/master/network/peer/test_peer.go) for more information.)
 You can send messages through the test peer to the node it is attached to.
 
 To attach a test peer to a node (in this case, `node1`):
@@ -568,26 +568,26 @@ curl -X POST -k http://localhost:8081/v1/ping -d ''
 To start the cluster with custom chains:
 
 ```bash
-# or download from https://github.com/MetalBlockchain/subnet-cli/releases
-cd ${HOME}/go/src/github.com/MetalBlockchain/subnet-cli
+# or download from https://github.com/shubhamdubey02/subnet-cli/releases
+cd ${HOME}/go/src/github.com/shubhamdubey02/subnet-cli
 go install -v .
 subnet-cli create VMID subnetevm
 # srEXiWaHuhNyGwPUi444Tu47ZEDwxTWrbQiuD7FmgSAQ6X7Dy
 
-# download from https://github.com/MetalBlockchain/metalgo/releases
+# download from https://github.com/cryft-labs/cryftgo/releases
 # or build
-rm -rf ${HOME}/go/src/github.com/MetalBlockchain/metalgo/build
-cd ${HOME}/go/src/github.com/MetalBlockchain/metalgo
+rm -rf ${HOME}/go/src/github.com/cryft-labs/cryftgo/build
+cd ${HOME}/go/src/github.com/cryft-labs/cryftgo
 ./scripts/build.sh
 
-# ref. https://github.com/MetalBlockchain/subnet-evm/blob/b69e47e0398b5237cda0422f6a32969e64bde346/scripts/run.sh
-cd ${HOME}/go/src/github.com/MetalBlockchain/subnet-evm
+# ref. https://github.com/shubhamdubey02/subnet-evm/blob/b69e47e0398b5237cda0422f6a32969e64bde346/scripts/run.sh
+cd ${HOME}/go/src/github.com/shubhamdubey02/subnet-evm
 go build -v \
--o ${HOME}/go/src/github.com/MetalBlockchain/metalgo/build/plugins/srEXiWaHuhNyGwPUi444Tu47ZEDwxTWrbQiuD7FmgSAQ6X7Dy \
+-o ${HOME}/go/src/github.com/cryft-labs/cryftgo/build/plugins/srEXiWaHuhNyGwPUi444Tu47ZEDwxTWrbQiuD7FmgSAQ6X7Dy \
 ./plugin
 
 # make sure binaries are built
-find ${HOME}/go/src/github.com/MetalBlockchain/metalgo/build
+find ${HOME}/go/src/github.com/cryft-labs/cryftgo/build
 # for example
 # .../build
 # .../build/plugins
@@ -646,8 +646,8 @@ cat /tmp/subnet-evm.genesis.json
 
 ```bash
 # replace execPath with the path to metalgo on your machine
-METALGO_EXEC_PATH="${HOME}/go/src/github.com/MetalBlockchain/metalgo/build/metalgo"
-METALGO_PLUGIN_PATH="${HOME}/go/src/github.com/MetalBlockchain/metalgo/build/plugins"
+METALGO_EXEC_PATH="${HOME}/go/src/github.com/cryft-labs/cryftgo/build/metalgo"
+METALGO_PLUGIN_PATH="${HOME}/go/src/github.com/cryft-labs/cryftgo/build/plugins"
 
 curl -X POST -k http://localhost:8081/v1/control/start -d '{"execPath":"'${METALGO_EXEC_PATH}'","numNodes":5,"logLevel":"INFO","pluginDir":"'${METALGO_PLUGIN_PATH}'","blockchainSpecs":[{"vm_name":"subnetevm","genesis":"/tmp/subnet-evm.genesis.json"}]}'
 
@@ -696,25 +696,25 @@ curl -X POST -k http://localhost:8081/v1/ping -d ''
 To start the cluster with custom chains:
 
 ```bash
-# or download from https://github.com/MetalBlockchain/subnet-cli/releases
-cd ${HOME}/go/src/github.com/MetalBlockchain/subnet-cli
+# or download from https://github.com/shubhamdubey02/subnet-cli/releases
+cd ${HOME}/go/src/github.com/shubhamdubey02/subnet-cli
 go install -v .
 subnet-cli create VMID blobvm
 # kM6h4LYe3AcEU1MB2UNg6ubzAiDAALZzpVrbX8zn3hXF6Avd8
 
-# download from https://github.com/MetalBlockchain/metalgo/releases
+# download from https://github.com/cryft-labs/cryftgo/releases
 # or build
-rm -rf ${HOME}/go/src/github.com/MetalBlockchain/metalgo/build
-cd ${HOME}/go/src/github.com/MetalBlockchain/metalgo
+rm -rf ${HOME}/go/src/github.com/cryft-labs/cryftgo/build
+cd ${HOME}/go/src/github.com/cryft-labs/cryftgo
 ./scripts/build.sh
 
-cd ${HOME}/go/src/github.com/MetalBlockchain/blobvm
+cd ${HOME}/go/src/github.com/shubhamdubey02/blobvm
 go build -v \
--o ${HOME}/go/src/github.com/MetalBlockchain/metalgo/build/plugins/kM6h4LYe3AcEU1MB2UNg6ubzAiDAALZzpVrbX8zn3hXF6Avd8 \
+-o ${HOME}/go/src/github.com/cryft-labs/cryftgo/build/plugins/kM6h4LYe3AcEU1MB2UNg6ubzAiDAALZzpVrbX8zn3hXF6Avd8 \
 ./cmd/blobvm
 
 # make sure binaries are built
-find ${HOME}/go/src/github.com/MetalBlockchain/metalgo/build
+find ${HOME}/go/src/github.com/cryft-labs/cryftgo/build
 # for example
 # .../build
 # .../build/plugins
@@ -723,7 +723,7 @@ find ${HOME}/go/src/github.com/MetalBlockchain/metalgo/build
 # .../build/metalgo
 
 # generate the genesis for the custom chain
-cd ${HOME}/go/src/github.com/MetalBlockchain/blobvm
+cd ${HOME}/go/src/github.com/shubhamdubey02/blobvm
 go install -v ./cmd/blob-cli
 echo "[]" > /tmp/alloc.json
 blob-cli genesis 1 /tmp/alloc.json --genesis-file /tmp/blobvm.genesis.json
@@ -732,8 +732,8 @@ cat /tmp/blobvm.genesis.json
 
 ```bash
 # replace execPath with the path to metalgo on your machine
-METALGO_EXEC_PATH="${HOME}/go/src/github.com/MetalBlockchain/metalgo/build/metalgo"
-METALGO_PLUGIN_PATH="${HOME}/go/src/github.com/MetalBlockchain/metalgo/build/plugins"
+METALGO_EXEC_PATH="${HOME}/go/src/github.com/cryft-labs/cryftgo/build/metalgo"
+METALGO_PLUGIN_PATH="${HOME}/go/src/github.com/cryft-labs/cryftgo/build/plugins"
 
 curl -X POST -k http://localhost:8081/v1/control/start -d '{"execPath":"'${METALGO_EXEC_PATH}'","numNodes":5,"logLevel":"INFO","pluginDir":"'${METALGO_PLUGIN_PATH}'","blockchainSpecs":[{"vm_name":"blobvm","genesis":"/tmp/blobvm.genesis.json"}]}'
 
@@ -782,28 +782,28 @@ curl -X POST -k http://localhost:8081/v1/ping -d ''
 To start the cluster with custom chains:
 
 ```bash
-# or download from https://github.com/MetalBlockchain/subnet-cli/releases
-cd ${HOME}/go/src/github.com/MetalBlockchain/subnet-cli
+# or download from https://github.com/shubhamdubey02/subnet-cli/releases
+cd ${HOME}/go/src/github.com/shubhamdubey02/subnet-cli
 go install -v .
 subnet-cli create VMID timestampvm
 # tGas3T58KzdjcJ2iKSyiYsWiqYctRXaPTqBCA11BqEkNg8kPc
 
-# download from https://github.com/MetalBlockchain/metalgo/releases
+# download from https://github.com/cryft-labs/cryftgo/releases
 # or build
-rm -rf ${HOME}/go/src/github.com/MetalBlockchain/metalgo/build
-cd ${HOME}/go/src/github.com/MetalBlockchain/metalgo
+rm -rf ${HOME}/go/src/github.com/cryft-labs/cryftgo/build
+cd ${HOME}/go/src/github.com/cryft-labs/cryftgo
 ./scripts/build.sh
 
-# or download from https://github.com/MetalBlockchain/timestampvm/releases
-# cd ${HOME}/go/src/github.com/MetalBlockchain/timestampvm
+# or download from https://github.com/shubhamdubey02/timestampvm/releases
+# cd ${HOME}/go/src/github.com/shubhamdubey02/timestampvm
 # ./scripts/build.sh
-cd ${HOME}/go/src/github.com/MetalBlockchain/timestampvm
+cd ${HOME}/go/src/github.com/shubhamdubey02/timestampvm
 go build -v \
--o ${HOME}/go/src/github.com/MetalBlockchain/metalgo/build/plugins/tGas3T58KzdjcJ2iKSyiYsWiqYctRXaPTqBCA11BqEkNg8kPc \
+-o ${HOME}/go/src/github.com/cryft-labs/cryftgo/build/plugins/tGas3T58KzdjcJ2iKSyiYsWiqYctRXaPTqBCA11BqEkNg8kPc \
 ./main
 
 # make sure binaries are built
-find ${HOME}/go/src/github.com/MetalBlockchain/metalgo/build
+find ${HOME}/go/src/github.com/cryft-labs/cryftgo/build
 # for example
 # .../build
 # .../build/plugins
@@ -818,8 +818,8 @@ echo hello > /tmp/timestampvm.genesis.json
 
 ```bash
 # replace execPath with the path to metalgo on your machine
-METALGO_EXEC_PATH="${HOME}/go/src/github.com/MetalBlockchain/metalgo/build/metalgo"
-METALGO_PLUGIN_PATH="${HOME}/go/src/github.com/MetalBlockchain/metalgo/build/plugins"
+METALGO_EXEC_PATH="${HOME}/go/src/github.com/cryft-labs/cryftgo/build/metalgo"
+METALGO_PLUGIN_PATH="${HOME}/go/src/github.com/cryft-labs/cryftgo/build/plugins"
 
 curl -X POST -k http://localhost:8081/v1/control/start -d '{"execPath":"'${METALGO_EXEC_PATH}'","numNodes":5,"logLevel":"INFO","pluginDir":"'${METALGO_PLUGIN_PATH}'","blockchainSpecs":[{"vmName":"timestampvm","genesis":"/tmp/timestampvm.genesis.json","blockchain_alias":"timestamp"}]}'
 

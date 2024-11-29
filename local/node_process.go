@@ -8,7 +8,7 @@ import (
 	"os/exec"
 	"sync"
 
-	"github.com/MetalBlockchain/metalgo/utils/logging"
+	"github.com/cryft-labs/cryftgo/utils/logging"
 	"github.com/shirou/gopsutil/process"
 	"github.com/shubhamdubey02/cryft-network-runner/network/node"
 	"github.com/shubhamdubey02/cryft-network-runner/network/node/status"

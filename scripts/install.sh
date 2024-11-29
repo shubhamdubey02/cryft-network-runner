@@ -2,7 +2,7 @@
 set -e
 
 PROJECT_NAME=metal-network-runner
-OWNER=MetalBlockchain
+OWNER=shubhamdubey02
 REPO="metal-network-runner"
 BINARY=metal-network-runner
 FORMAT=tar.gz
