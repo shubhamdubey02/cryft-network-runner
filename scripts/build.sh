@@ -21,4 +21,4 @@ fi
 # to pass this flag to all child processes spawned by the shell.
 export CGO_CFLAGS="-O -D__BLST_PORTABLE__"
 
-go build -v -ldflags="-X 'github.com/MetalBlockchain/metal-network-runner/cmd.Version=$VERSION'" -o $OUTPUT/metal-network-runner
+go build -v -ldflags="-X 'github.com/shubhamdubey02/cryft-network-runner/cmd.Version=$VERSION'" -o $OUTPUT/metal-network-runner

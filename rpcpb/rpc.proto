@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/MetalBlockchain/metal-network-runner;rpcpb";
+option go_package = "github.com/shubhamdubey02/cryft-network-runner;rpcpb";
 
 package rpcpb;
 

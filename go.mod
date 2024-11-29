@@ -1,4 +1,4 @@
-module github.com/MetalBlockchain/metal-network-runner
+module github.com/shubhamdubey02/cryft-network-runner
 
 go 1.19
 

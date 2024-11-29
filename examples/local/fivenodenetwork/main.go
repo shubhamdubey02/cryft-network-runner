@@ -9,9 +9,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/MetalBlockchain/metal-network-runner/local"
-	"github.com/MetalBlockchain/metal-network-runner/network"
 	"github.com/MetalBlockchain/metalgo/utils/logging"
+	"github.com/shubhamdubey02/cryft-network-runner/local"
+	"github.com/shubhamdubey02/cryft-network-runner/network"
 	"go.uber.org/zap"
 )
 

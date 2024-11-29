@@ -8,11 +8,11 @@ import (
 	"os"
 	"time"
 
-	rpcb "github.com/MetalBlockchain/metal-network-runner/rpcpb"
-	"github.com/MetalBlockchain/metal-network-runner/ux"
 	"github.com/MetalBlockchain/metalgo/ids"
 	"github.com/MetalBlockchain/metalgo/staking"
 	"github.com/MetalBlockchain/metalgo/utils/logging"
+	rpcb "github.com/shubhamdubey02/cryft-network-runner/rpcpb"
+	"github.com/shubhamdubey02/cryft-network-runner/ux"
 )
 
 const (
