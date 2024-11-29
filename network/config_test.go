@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/MetalBlockchain/metal-network-runner/network"
-	"github.com/MetalBlockchain/metal-network-runner/network/node"
+	"github.com/shubhamdubey02/cryft-network-runner/network"
+	"github.com/shubhamdubey02/cryft-network-runner/network/node"
 	"github.com/stretchr/testify/require"
 )
 

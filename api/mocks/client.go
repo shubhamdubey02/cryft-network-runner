@@ -3,7 +3,7 @@
 package mocks
 
 import (
-	api "github.com/MetalBlockchain/metal-network-runner/api"
+	api "github.com/shubhamdubey02/cryft-network-runner/api"
 	admin "github.com/MetalBlockchain/metalgo/api/admin"
 
 	avm "github.com/MetalBlockchain/metalgo/vms/avm"

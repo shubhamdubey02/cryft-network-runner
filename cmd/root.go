@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/MetalBlockchain/metal-network-runner/cmd/control"
-	"github.com/MetalBlockchain/metal-network-runner/cmd/ping"
-	"github.com/MetalBlockchain/metal-network-runner/cmd/server"
+	"github.com/shubhamdubey02/cryft-network-runner/cmd/control"
+	"github.com/shubhamdubey02/cryft-network-runner/cmd/ping"
+	"github.com/shubhamdubey02/cryft-network-runner/cmd/server"
 	"github.com/spf13/cobra"
 )
 

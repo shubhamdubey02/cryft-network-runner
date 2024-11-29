@@ -6,7 +6,7 @@ builds:
     flags:
       - -v
     ldflags:
-      - -X 'github.com/MetalBlockchain/metal-network-runner/cmd.Version={{.Version}}'
+      - -X 'github.com/shubhamdubey02/cryft-network-runner/cmd.Version={{.Version}}'
     goos:
       - linux
       - darwin

@@ -42,7 +42,7 @@ Requires golang to be installed on the system ([https://go.dev/doc/install](http
 ### Download
 
 ```sh
-git clone https://github.com/MetalBlockchain/metal-network-runner.git
+git clone https://github.com/shubhamdubey02/cryft-network-runner.git
 ```
 
 ### Build

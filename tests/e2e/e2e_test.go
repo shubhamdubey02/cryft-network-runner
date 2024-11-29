@@ -21,16 +21,16 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"golang.org/x/exp/maps"
 
-	"github.com/MetalBlockchain/metal-network-runner/client"
-	"github.com/MetalBlockchain/metal-network-runner/rpcpb"
-	"github.com/MetalBlockchain/metal-network-runner/server"
-	"github.com/MetalBlockchain/metal-network-runner/utils"
-	"github.com/MetalBlockchain/metal-network-runner/utils/constants"
-	"github.com/MetalBlockchain/metal-network-runner/ux"
 	"github.com/MetalBlockchain/metalgo/ids"
 	"github.com/MetalBlockchain/metalgo/utils/logging"
 	ginkgo "github.com/onsi/ginkgo/v2"
 	"github.com/onsi/gomega"
+	"github.com/shubhamdubey02/cryft-network-runner/client"
+	"github.com/shubhamdubey02/cryft-network-runner/rpcpb"
+	"github.com/shubhamdubey02/cryft-network-runner/server"
+	"github.com/shubhamdubey02/cryft-network-runner/utils"
+	"github.com/shubhamdubey02/cryft-network-runner/utils/constants"
+	"github.com/shubhamdubey02/cryft-network-runner/ux"
 )
 
 func TestE2e(t *testing.T) {
