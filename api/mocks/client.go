@@ -16,7 +16,7 @@ import (
 
 	info "github.com/cryft-labs/cryftgo/api/info"
 
-	ipcs "github.com/cryft-labs/cryftgo/api/ipcs"
+	//ipcs "github.com/cryft-labs/cryftgo/api/ipcs"
 
 	keystore "github.com/cryft-labs/cryftgo/api/keystore"
 

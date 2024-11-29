@@ -7,7 +7,8 @@ import (
 	"github.com/cryft-labs/cryftgo/api/admin"
 	"github.com/cryft-labs/cryftgo/api/health"
 	"github.com/cryft-labs/cryftgo/api/info"
-	"github.com/cryft-labs/cryftgo/api/ipcs"
+
+	//"github.com/cryft-labs/cryftgo/api/ipcs"
 	"github.com/cryft-labs/cryftgo/api/keystore"
 	"github.com/cryft-labs/cryftgo/indexer"
 	"github.com/cryft-labs/cryftgo/vms/avm"
