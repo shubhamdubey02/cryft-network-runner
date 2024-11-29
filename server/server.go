@@ -21,11 +21,11 @@ import (
 
 	"go.uber.org/multierr"
 
-	"github.com/MetalBlockchain/metalgo/config"
-	"github.com/MetalBlockchain/metalgo/message"
-	"github.com/MetalBlockchain/metalgo/snow/networking/router"
-	"github.com/MetalBlockchain/metalgo/utils/logging"
-	"github.com/MetalBlockchain/metalgo/utils/set"
+	"github.com/cryft-labs/cryftgo/config"
+	"github.com/cryft-labs/cryftgo/message"
+	"github.com/cryft-labs/cryftgo/snow/networking/router"
+	"github.com/cryft-labs/cryftgo/utils/logging"
+	"github.com/cryft-labs/cryftgo/utils/set"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"github.com/shubhamdubey02/cryft-network-runner/network"
 	"github.com/shubhamdubey02/cryft-network-runner/network/node"

@@ -3,8 +3,8 @@ module github.com/shubhamdubey02/cryft-network-runner
 go 1.21
 
 require (
-	github.com/MetalBlockchain/coreth v0.13.2-rc.3
-	github.com/MetalBlockchain/metalgo v1.11.3-rc.1
+	github.com/cryft-labs/coreth v0.0.3-sam
+	github.com/cryft-labs/cryftgo v1.0.0-rc
 	github.com/ethereum/go-ethereum v1.12.2
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.16.0
 	github.com/onsi/ginkgo/v2 v2.13.1

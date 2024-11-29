@@ -6,7 +6,7 @@ import (
 	"io"
 	"sync"
 
-	"github.com/MetalBlockchain/metalgo/utils/logging"
+	"github.com/cryft-labs/cryftgo/utils/logging"
 )
 
 var supportedColors = []logging.Color{

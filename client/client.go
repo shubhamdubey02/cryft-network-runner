@@ -12,7 +12,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/MetalBlockchain/metalgo/utils/logging"
+	"github.com/cryft-labs/cryftgo/utils/logging"
 	"github.com/shubhamdubey02/cryft-network-runner/local"
 	"github.com/shubhamdubey02/cryft-network-runner/rpcpb"
 	"go.uber.org/zap"

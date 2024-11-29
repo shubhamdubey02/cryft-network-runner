@@ -8,9 +8,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/MetalBlockchain/metalgo/ids"
-	"github.com/MetalBlockchain/metalgo/staking"
-	"github.com/MetalBlockchain/metalgo/utils/logging"
+	"github.com/cryft-labs/cryftgo/ids"
+	"github.com/cryft-labs/cryftgo/staking"
+	"github.com/cryft-labs/cryftgo/utils/logging"
 	rpcb "github.com/shubhamdubey02/cryft-network-runner/rpcpb"
 	"github.com/shubhamdubey02/cryft-network-runner/ux"
 )

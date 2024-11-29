@@ -11,9 +11,9 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/MetalBlockchain/metalgo/config"
-	"github.com/MetalBlockchain/metalgo/utils/constants"
-	"github.com/MetalBlockchain/metalgo/utils/logging"
+	"github.com/cryft-labs/cryftgo/config"
+	"github.com/cryft-labs/cryftgo/utils/constants"
+	"github.com/cryft-labs/cryftgo/utils/logging"
 	"github.com/shubhamdubey02/cryft-network-runner/network/node"
 	"go.uber.org/zap"
 )

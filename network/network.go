@@ -5,7 +5,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/MetalBlockchain/metalgo/ids"
+	"github.com/cryft-labs/cryftgo/ids"
 	"github.com/shubhamdubey02/cryft-network-runner/network/node"
 )
 

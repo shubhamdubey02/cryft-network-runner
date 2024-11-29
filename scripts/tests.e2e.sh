@@ -47,13 +47,13 @@ if [ ! -f /tmp/metalgo-v${VERSION_1}/metalgo ]
 then
     ############################
     # download metalgo
-    # https://github.com/MetalBlockchain/metalgo/releases
+    # https://github.com/cryft-labs/cryftgo/releases
     GOARCH=$(go env GOARCH)
     GOOS=$(go env GOOS)
-    DOWNLOAD_URL=https://github.com/MetalBlockchain/metalgo/releases/download/v${VERSION_1}/metalgo-linux-${GOARCH}-v${VERSION_1}.tar.gz
+    DOWNLOAD_URL=https://github.com/cryft-labs/cryftgo/releases/download/v${VERSION_1}/metalgo-linux-${GOARCH}-v${VERSION_1}.tar.gz
     DOWNLOAD_PATH=/tmp/metalgo.tar.gz
     if [[ ${GOOS} == "darwin" ]]; then
-      DOWNLOAD_URL=https://github.com/MetalBlockchain/metalgo/releases/download/v${VERSION_1}/metalgo-macos-v${VERSION_1}.zip
+      DOWNLOAD_URL=https://github.com/cryft-labs/cryftgo/releases/download/v${VERSION_1}/metalgo-macos-v${VERSION_1}.zip
       DOWNLOAD_PATH=/tmp/metalgo.zip
     fi
 
@@ -78,13 +78,13 @@ if [ ! -f /tmp/metalgo-v${VERSION_2}/metalgo ]
 then
     ############################
     # download metalgo
-    # https://github.com/MetalBlockchain/metalgo/releases
+    # https://github.com/cryft-labs/cryftgo/releases
     GOARCH=$(go env GOARCH)
     GOOS=$(go env GOOS)
-    DOWNLOAD_URL=https://github.com/MetalBlockchain/metalgo/releases/download/v${VERSION_2}/metalgo-linux-${GOARCH}-v${VERSION_2}.tar.gz
+    DOWNLOAD_URL=https://github.com/cryft-labs/cryftgo/releases/download/v${VERSION_2}/metalgo-linux-${GOARCH}-v${VERSION_2}.tar.gz
     DOWNLOAD_PATH=/tmp/metalgo.tar.gz
     if [[ ${GOOS} == "darwin" ]]; then
-      DOWNLOAD_URL=https://github.com/MetalBlockchain/metalgo/releases/download/v${VERSION_2}/metalgo-macos-v${VERSION_2}.zip
+      DOWNLOAD_URL=https://github.com/cryft-labs/cryftgo/releases/download/v${VERSION_2}/metalgo-macos-v${VERSION_2}.zip
       DOWNLOAD_PATH=/tmp/metalgo.zip
     fi
 

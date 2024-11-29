@@ -5,7 +5,7 @@ package ux
 import (
 	"fmt"
 
-	"github.com/MetalBlockchain/metalgo/utils/logging"
+	"github.com/cryft-labs/cryftgo/utils/logging"
 )
 
 func Print(log logging.Logger, msg string, args ...interface{}) {
