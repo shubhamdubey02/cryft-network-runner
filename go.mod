@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/cryft-labs/coreth v0.0.3-sosa
-	github.com/cryft-labs/cryftgo v1.0.0-rc
+	github.com/cryft-labs/cryftgo v1.0.0-wilson
 	github.com/ethereum/go-ethereum v1.12.0
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.15.2
 	github.com/onsi/ginkgo/v2 v2.8.1
